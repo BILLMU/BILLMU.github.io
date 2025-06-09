@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Inker's</title><meta name="author" content="Inker Mu"><meta name="copyright" content="Inker Mu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="莫道功名须百战，愿效滴水洞石穿">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Inker&#39;s">
+<meta property="og:url" content="http://example.com/page/2/index.html">
+<meta property="og:site_name" content="Inker&#39;s">
+<meta property="og:description" content="莫道功名须百战，愿效滴水洞石穿">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/assets/blog_photo.png">
+<meta property="article:author" content="Inker Mu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/assets/blog_photo.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Inker\'s',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/assets/blog_photo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/assets/bg_image.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Inker's</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Inker's</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2025/05/28/model-evaluation-index/" title="2.7模型评价指标(性能度量)"><img class="post-bg" src="/%5Cassets%5Cimage-20250510144342687.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2.7模型评价指标(性能度量)"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/28/model-evaluation-index/" title="2.7模型评价指标(性能度量)">2.7模型评价指标(性能度量)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-28T05:57:36.000Z" title="发表于 2025-05-28 13:57:36">2025-05-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></span></div><div class="content">模型评价指标(性能度量) 模型的评价指标用于衡量模型在训练集或测试集上的性能，评估结果反映了模型预测的准确性和泛化能力。 对于回归问题，最常用的性能度量是“均方误差” (Mean Squared Error，MSE)。 1. 回归模型评价指标 1.1 平均绝对误差（MAE） MAE=1n∑i=1n∣f(xi)−yi∣MAE = \frac 1 n \sum_{i=1}^n |f(x_i) - y_i| MAE=n1​i=1∑n​∣f(xi​)−yi​∣ MAE对异常值不敏感，解释直观。适用于数据包含异常值的场景。 1.2 均方误差（MSE） MSE=1n∑i=1n(f(xi)−yi)2MSE = \frac 1 n \sum_{i=1}^n (f(x_i) - y_i)^2 MSE=n1​i=1∑n​(f(xi​)−yi​)2 MSE会放大较大误差，对异常值敏感。适用于需要惩罚大误差的场景。 1.3 均方根误差（RMSE） RMSE=1n∑i=1n(f(xi)−yi)2RMSE = \sqrt{\frac 1 n \sum_{i=1}^n (f(x_i) -...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/05/28/model-solving/" title="2.6模型求解算法">2.6模型求解算法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-28T05:52:17.000Z" title="发表于 2025-05-28 13:52:17">2025-05-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></span></div><div class="content">模型求解算法 正则化可以有效防止过拟合，增强模型的泛化能力。这时模型的评估策略，就是让结构化的经验风险最小，即增加了正则化项的损失函数最小，称为 结构风险最小化（Structural Risk Minimization，SRM）。 min1n∑i=1nL(yi,f(xi))+λJ(θ)min\frac{1}{n}\sum_{i=1}^{n}L(y_i,f(x_i))+λJ(θ) minn1​i=1∑n​L(yi​,f(xi​))+λJ(θ) 这其实就是求解一个 最优化问题。代入训练集所有数据(xi,yi)(x_i, y_i)(xi​,yi​) ，要求最小值的目标函数就是模型中参数θ\thetaθ的函数。 具体求解的算法，可以利用数学公式直接计算解析解，也可以使用迭代算法。 1 . 解析法 如果模型损失函数的最小值可以通过数学公式进行严格推导，得到一个解析解，那么就直接得到了最优模型的全部参数。这种方法称作解析法。 1.1...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/05/28/model-selection/" title="2.5模型评估和模型选择"><img class="post-bg" src="/%5Cassets%5Cimage-20250509095631901.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2.5模型评估和模型选择"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/28/model-selection/" title="2.5模型评估和模型选择">2.5模型评估和模型选择</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-28T02:01:01.000Z" title="发表于 2025-05-28 10:01:01">2025-05-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></span></div><div class="content">模型评估和模型选择 1. 损失函数 对于模型一次预测结果的好坏，需要有一个度量标准。 对于监督学习而言，给定一个输入X，选取的模型就相当于一个“决策函数”f，它可以输出一个预测结果f(X)，而真实的结果（标签）记为Y。f(X) 和Y之间可能会有偏差，我们就用一个损失函数（loss function）来度量预测偏差的程度，记作 L(Y,f(X))。  损失函数用来衡量模型预测误差的大小；损失函数值越小，模型就越好； 损失函数是f(X)和Y的非负实值函数；  1.1 0-1损失函数 1.1.1定义与公式 对于一个分类问题，设真实标签为 Y，预测标签为f(X)f(X)f(X)，0 - 1 损失函数定义为： L(Y,f(X))={1,Y≠f(X)0,Y=f(X)L(Y,f(X)) = \begin{cases} 1, &amp; Y \neq f(X) \\ 0, &amp; Y = f(X) \end{cases} L(Y,f(X))={1,0,​Y​=f(X)Y=f(X)​ 也就是说，当预测结果与真实结果一致时，损失为 0；不一致时，损失为 1。 1.1.2...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/05/28/ML-base/" title="2.机器学习基本理论"><img class="post-bg" src="/%5Cassets%5Cimage-20250507100158015.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2.机器学习基本理论"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/28/ML-base/" title="2.机器学习基本理论">2.机器学习基本理论</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-28T02:00:01.000Z" title="发表于 2025-05-28 10:00:01">2025-05-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></span></div><div class="content">2.机器学习基本理论 术语  数据集（Data Set）：多条记录的集合。  训练集（Training Set）：用于训练模型的数据。 验证集（Validation Set）：用于调节超参数的数据。 测试集（Test Set）：用于评估模型性能的数据。  样本（Sample）：数据集中的一条记录是关于一个事件或对象的描述，称为一个样本。 特征（Feature）：数据集中一列反映事件或对象在某方面的表现或性质的事项，称为特征或属性。 特征向量（Feature Vector）：将样本的所有特征表示为向量的形式，输入到模型中。 标签（Label）：监督学习中每个样本的结果信息，也称作目标值（target）。 模型（Model）：一个机器学习算法与训练后的参数集合，用于进行预测或分类。 训练  (Training)：通过模型得到参数的过程 参数（Parameter）：模型通过训练学习到的值，例如线性回归中的权重和偏置。 超参数（Hyper Parameter）：由用户设置的参数，不能通过训练自动学习，例如学习率α\alphaα、正则化系数λ\lambdaλ等。 2.1...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/05/28/learnig-skills/" title="第五章 学习的技巧"><img class="post-bg" src="/assets/image-20250526084551395.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第五章 学习的技巧"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/28/learnig-skills/" title="第五章 学习的技巧">第五章 学习的技巧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-28T00:26:50.000Z" title="发表于 2025-05-28 08:26:50">2025-05-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></span></div><div class="content">第五章 学习的技巧 5.1 深度神经网络及其问题 5.1.1 深度学习 当神经网络的层数加深时，往往可以有效地提高识别精度；特别是对于大规模的复杂问题，通常都需要用更多的层来分层次传递信息，而且可以有效减少网络的参数数量，从而使得学习更加高效。使用深度神经网络进行的学习就被称为深度学习（Deep Learning）。 ILSVRC是近年来机器视觉领域最受追捧且最具权威的学术竞赛之一，代表了图像领域的最高水平。它包含多个测试项目，其中最有名的就是“类别分类”（Classification），该项目会进行1000个类别的分类，比试识别精度。自从2012年以后的ILSVRC比赛，优胜队伍采用的方法基本上都是以深度学习为基础的。 可以说，深度学习代表了目前人工智能领域的发展方向，正以超乎想象的速度发展并改变我们的生活。 5.1.2...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/05/27/Back-Propagation/" title="第4章 反向传播算法"><img class="post-bg" src="/assets/image-20250521153827515.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第4章 反向传播算法"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/27/Back-Propagation/" title="第4章 反向传播算法">第4章 反向传播算法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-27T10:55:15.000Z" title="发表于 2025-05-27 18:55:15">2025-05-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></span></div><div class="content">第4章 反向传播算法 反向传播（Backward Propagation或Back Propagation，BP算法）指的是计算神经网络参数梯度的方法。简言之，该方法根据微积分中的链式法则，按相反的顺序从输出层到输入层遍历网络。该算法存储了计算某些参数梯度时所需的任何中间变量。 4.1 计算图 计算图将计算过程用图表示出来。这里说的图是数据结构中的图，通过多个节点和边表示（连接节点的直线称为边）。  如上就是 100×2+150×3=650 的计算图表示。 计算图的基本计算原则，就是从输入出发、按照箭头方向，从左到右依次进行计算，最终得到输出结果。这个过程，其实就是...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/05/27/ANN-learn/" title="第3章 神经网络的学习"><img class="post-bg" src="/%5Cassets%5Cimage-20250520115559194.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第3章 神经网络的学习"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/27/ANN-learn/" title="第3章 神经网络的学习">第3章 神经网络的学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-27T10:28:35.000Z" title="发表于 2025-05-27 18:28:35">2025-05-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></span></div><div class="content">第3章 神经网络的学习 神经网络的主要特点，就是可以从数据中进行“学习”。这个学习的过程，就是让训练数据自动决定最优的权重参数。 神经网络（深度学习）也是机器学习的一种；跟传统机器学习方法相比，神经网络不需要人工设置特征量（如SIFT、HOG等），这样就可以用同样的流程直接处理所有问题了。 3.1 损失函数 神经网络中，需要以某个指标为线索来寻找最优权重参数；这个指标就是损失函数（loss function）。 3.1.1 常见损失函数 1）均方误差（MSE） 均方误差（Mean Squared Error ，MSE），也称L2 Loss： L=1n∑i=1n(yi−ti)2L = \frac{1}{n}\sum_{i=1}^{n}(y_i - t_i)^2 L=n1​i=1∑n​(yi​−ti​)2 其中，yiy_iyi​表示神经网络的输出，tit_iti​表示监督数据的标签（正确的解标签），nnn则是数据的“维度”。对于固定维度的网络，前面的系数nnn不重要，因此公式有时也可以写成： L=12∑i=1n(yi−ti)2L =...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/05/27/ANN-base/" title="第2章 神经网络基础"><img class="post-bg" src="/%5Cassets%5Cimage-20250519103244151.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第2章 神经网络基础"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/05/27/ANN-base/" title="第2章 神经网络基础">第2章 神经网络基础</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-05-27T09:30:45.000Z" title="发表于 2025-05-27 17:30:45">2025-05-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></span></div><div class="content">第2章 神经网络基础 2.1 神经网络的构成  在生物体中，神经元是神经系统最基本的结构和功能单位。 神经元从树突接收其它神经元细胞发出的电化学刺激脉冲，这些脉冲叠加后，一旦强度达到临界值，这个神经元就会产生动作电位，沿着轴突发送电信号。 轴突将刺激传到末端的突触，电信号触发突触上面的电压敏感蛋白，把一个内含神经递质的小泡（突触小体）推到突触的膜上，从而释放出突触小体中的神经递质，这些化学物质会扩散到其它神经元的树突或轴突上。 2.1.1 基本概念和结构 人工神经网络（Artificial Neural...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/assets/blog_photo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Inker Mu</div><div class="author-info-description">莫道功名须百战，愿效滴水洞石穿</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/06/03/Unsupervised-learning/" title="第8章 无监督学习"><img src="/%5Cassets%5Cimage-20250516162523626.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第8章 无监督学习"/></a><div class="content"><a class="title" href="/2025/06/03/Unsupervised-learning/" title="第8章 无监督学习">第8章 无监督学习</a><time datetime="2025-06-03T07:20:34.000Z" title="发表于 2025-06-03 15:20:34">2025-06-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/03/Other-supervised-learning-algorithms/" title="其他监督学习算法(了解)"><img src="/%5Cassets%5Cimage-20250516101901715.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="其他监督学习算法(了解)"/></a><div class="content"><a class="title" href="/2025/06/03/Other-supervised-learning-algorithms/" title="其他监督学习算法(了解)">其他监督学习算法(了解)</a><time datetime="2025-06-03T07:17:55.000Z" title="发表于 2025-06-03 15:17:55">2025-06-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/03/Perceptron/" title="第6章 感知机"><img src="/%5Cassets%5Cimage-20250514151530411.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第6章 感知机"/></a><div class="content"><a class="title" href="/2025/06/03/Perceptron/" title="第6章 感知机">第6章 感知机</a><time datetime="2025-06-03T07:15:20.000Z" title="发表于 2025-06-03 15:15:20">2025-06-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/03/Logistic-Regression/" title="第5章 逻辑回归"><img src="/%5Cassets%5Cimage-20250514092312685.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第5章 逻辑回归"/></a><div class="content"><a class="title" href="/2025/06/03/Logistic-Regression/" title="第5章 逻辑回归">第5章 逻辑回归</a><time datetime="2025-06-03T07:11:03.000Z" title="发表于 2025-06-03 15:11:03">2025-06-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/06/03/Linear-Regression/" title="第4章线性回归"><img src="/%5Cassets%5Cimage-20250513094045110.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第4章线性回归"/></a><div class="content"><a class="title" href="/2025/06/03/Linear-Regression/" title="第4章线性回归">第4章线性回归</a><time datetime="2025-06-03T07:08:03.000Z" title="发表于 2025-06-03 15:08:03">2025-06-03</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">机器学习</span><span class="card-category-list-count">10</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">深度学习</span><span class="card-category-list-count">8</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86/"><span class="card-category-list-name">补充知识</span><span class="card-category-list-count">2</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 1.5em; color: #99a9bf">机器学习</a> <a href="/tags/%E8%A1%A5%E5%85%85%E7%9F%A5%E8%AF%86/" style="font-size: 1.1em; color: #999">补充知识</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.3em; color: #99a1ac">深度学习</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">11</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">18</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-06-09T12:17:10.386Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 By Inker Mu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
